@@ -1,52 +1,43 @@
-# WanderList Dashboard
+# WanderList — Day 25 Task (useEffect Hook)
 
-A complete travel planning dashboard built with React, allowing users to browse destinations, add new ones, filter by region, and track estimated trip budgets.
+## Objective
+Learn how to perform side effects in React using the `useEffect` Hook by fetching
+real destination data from a public API instead of using hardcoded data.
+
+## What I did
+Replaced the hardcoded destination array in the WanderList app with live country
+data fetched from the **REST Countries API**, using the `useEffect` Hook to load
+data when the component mounts.
+
+## Tech Used
+- React (`useState`, `useEffect`)
+- Fetch API + `async/await`
+- REST Countries API (v5)
 
 ## Features
-
-- **Destination Management** – View destinations and add new ones through a form
-- **Region Filtering** – Filter destinations by Asia, Europe, Americas, Africa, and Oceania
-- **Trip Budget Widget** – Automatically calculates total destinations and estimated budget
-- **Responsive Design** – Works smoothly across desktop and mobile devices
-
-## Tech Stack
-
-- React (useState Hook for state management)
-- Vite
-- CSS3
+- Destination cards populated dynamically from the API (name, region, capital, population)
+- Loading and error states while data is being fetched
+- Region filter (All, Asia, Europe, Americas, Africa, Oceania)
+- Trip budget summary (total destinations + total estimated budget)
+- Option to manually add a new destination
 
 ## Screenshots
 
-### Dashboard View
+### Dashboard with live country data
 
 
-![Dashboard](./screenshots/7.png)
-
-
-
-
-![Dashboard](./screenshots/8.png)
+![Dashboard](1.png)
 
 
 
-### Add New Destination
+### Destination cards
 
 
-![Add Destination](./screenshots/9.png)
+![Destination Cards](2.png)
 
 
 
- Open `http://localhost:5173` in your browser
-
-## Project Structure
-src/
-components/
-AppHeader.jsx
-RegionFilter.jsx
-DestinationCard.jsx
-DestinationGrid.jsx
-AddDestinationForm.jsx
-BudgetWidget.jsx
-App.jsx
-App.css
-main.jsx
+## How to Run
+```bash
+npm install
+npm run dev
